@@ -7,7 +7,8 @@ extension:
   description: "Generate evidence-backed UI context from images, HTML, and repository conventions for the Spec Kit workflow."
   category: "design"
   effect: "read-write"
-  author: "UI Context contributors"
+  author: "philo-x"
+  repository: "https://github.com/philo-x/spec-kit-extension-ui-context"
   license: "MIT"
 
 requires:
@@ -31,4 +32,3 @@ tags:
 # No contributed hooks are enabled by default.
 # context.md hosts before_ui_context / after_ui_context lifecycle slots.
 # These slots do not automatically inject context into core commands.
-# Add the actual repository URL before publishing; do not use a fictitious URL.
