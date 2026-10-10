@@ -1,0 +1,34 @@
+schema_version: "1.0"
+
+extension:
+  id: "ui"
+  name: "Repository-Aligned UI Context"
+  version: "0.1.0"
+  description: "Generate evidence-backed UI context from images, HTML, and repository conventions for the Spec Kit workflow."
+  category: "design"
+  effect: "read-write"
+  author: "UI Context contributors"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=1.0.13"
+
+provides:
+  commands:
+    - name: "speckit.ui.context"
+      file: "commands/context.md"
+      description: "Generate or refresh repository-aligned UI context without implementing the UI."
+  templates:
+    - name: "ui-context-template"
+      file: "templates/ui-context-template.md"
+      description: "UI evidence, repository alignment, conflicts, and downstream consumption contract."
+
+tags:
+  - "ui"
+  - "design-context"
+  - "evidence"
+
+# No contributed hooks are enabled by default.
+# context.md hosts before_ui_context / after_ui_context lifecycle slots.
+# These slots do not automatically inject context into core commands.
+# Add the actual repository URL before publishing; do not use a fictitious URL.
